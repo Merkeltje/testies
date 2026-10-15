@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog — Ruijv Interieur</title>
+<link rel="stylesheet" href="_shared.css">
+<style>
+  .blog-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+  .blog-card { border-radius: 4px; overflow: hidden; background: var(--blush); transition: transform 0.3s; cursor: pointer; }
+  .blog-card:hover { transform: translateY(-4px); }
+  .blog-thumb { height: 220px; overflow: hidden; }
+  .blog-thumb img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s; }
+  .blog-card:hover .blog-thumb img { transform: scale(1.04); }
+  .blog-body { padding: 24px; }
+  .blog-cat { font-family: sans-serif; font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--clay); margin-bottom: 8px; }
+  .blog-card h3 { font-size: 1.05rem; color: var(--dark); font-weight: 400; margin-bottom: 10px; line-height: 1.4; }
+  .blog-card p { font-family: sans-serif; font-size: 0.86rem; line-height: 1.6; color: var(--text); margin-bottom: 16px; }
+  .blog-meta { display: flex; justify-content: space-between; align-items: center; font-family: sans-serif; font-size: 0.78rem; color: var(--accent); }
+  .blog-featured { display: grid; grid-template-columns: 1fr 1fr; gap: 0; border-radius: 4px; overflow: hidden; margin-bottom: 48px; background: var(--blush); }
+  .blog-featured-img { overflow: hidden; height: 400px; }
+  .blog-featured-img img { width: 100%; height: 100%; object-fit: cover; }
+  .blog-featured-body { padding: 48px 40px; display: flex; flex-direction: column; justify-content: center; }
+  .blog-featured-body .blog-cat { font-size: 0.78rem; }
+  .blog-featured-body h2 { font-size: clamp(1.4rem, 2.5vw, 2rem); color: var(--dark); font-weight: 400; margin-bottom: 16px; line-height: 1.3; }
+  .blog-featured-body p { font-family: sans-serif; font-size: 0.93rem; line-height: 1.7; color: var(--text); margin-bottom: 24px; }
+  .newsletter { background: var(--dark); color: #fff; padding: 48px 60px; display: flex; align-items: center; gap: 60px; }
+  .newsletter h3 { font-size: 1.6rem; font-weight: 400; margin-bottom: 8px; white-space: nowrap; }
+  .newsletter p { font-family: sans-serif; font-size: 0.9rem; opacity: 0.75; }
+  .newsletter-form { display: flex; gap: 12px; flex: 1; }
+  .newsletter-form input { flex: 1; padding: 12px 16px; font-family: sans-serif; font-size: 0.9rem; border: none; border-radius: 2px; outline: none; }
+  @media(max-width:900px){ .blog-grid{grid-template-columns:1fr 1fr;} .blog-featured{grid-template-columns:1fr;} .blog-featured-img{height:240px;} .newsletter{flex-direction:column;gap:24px;padding:40px 24px;} .newsletter-form{flex-direction:column;} .newsletter h3{white-space:normal;} }
+  @media(max-width:600px){ .blog-grid{grid-template-columns:1fr;} }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="ruijvinterieur_redesign.html"><img src="ruijv_images/logo_nieuw.png" class="nav-logo" alt="Ruijv Interieur"></a>
+  <ul class="nav-links">
+    <li><a href="portfolio.html">Portfolio</a></li>
+    <li><a href="advies-pakketten.html">Diensten</a></li>
+    <li><a href="blog.html" class="active">Blog</a></li>
+    <li><a href="over-isabel.html">Over Isabel</a></li>
+  </ul>
+  <a href="contact.html" class="nav-cta">Kennismaking aanvragen</a>
+</nav>
+
+<section class="section">
+
+  <!-- Uitgelicht artikel -->
+  <div class="blog-featured">
+    <div class="blog-featured-img">
+      <img src="ruijv_images/e594ec519bd594f7120a6b00c0af3c29.jpg" alt="featured">
+    </div>
+    <div class="blog-featured-body">
+      <p class="blog-cat">Kleuradvies · Uitgelicht</p>
+      <h2>Waarom wit niet altijd de veiligste keuze is</h2>
+      <p>Wit lijkt neutraal, maar in de praktijk kan het koud, hard of zelfs grijs aanvoelen. Hoe komt dat, en wat doe je eraan? Isabel legt uit hoe licht de perceptie van kleur bepaalt.</p>
+      <a href="#" class="btn-primary">Lees het artikel</a>
+    </div>
+  </div>
+
+  <!-- Blog artikelen -->
+  <div class="blog-grid">
+    <div class="blog-card">
+      <div class="blog-thumb"><img src="ruijv_images/84e16d7bf35ae86cadb693b7b6aeb882.jpg" alt="blog"></div>
+      <div class="blog-body">
+        <p class="blog-cat">Interieuradvies</p>
+        <h3>5 fouten die mensen maken bij het inrichten van een kleine woonkamer</h3>
+        <p>Te veel meubels, te weinig licht — de meest gemaakte fouten en hoe je ze vermijdt.</p>
+        <div class="blog-meta"><span>12 mei 2026</span><a href="#" style="color:var(--accent);text-decoration:none;font-size:0.82rem;">Lees meer →</a></div>
+      </div>
+    </div>
+
+    <div class="blog-card">
+      <div class="blog-thumb"><img src="ruijv_images/9344eaee06e1cdae23ca5a02f7321b78.jpg" alt="blog"></div>
+      <div class="blog-body">
+        <p class="blog-cat">Kleuradvies</p>
+        <h3>Welke kleur past bij welk licht? Een praktische gids</h3>
+        <p>Noord-, oost-, west- of zuidgericht? De richting van je ramen bepaalt alles over hoe kleur eruitziet.</p>
+        <div class="blog-meta"><span>28 april 2026</span><a href="#" style="color:var(--accent);text-decoration:none;font-size:0.82rem;">Lees meer →</a></div>
+      </div>
+    </div>
+
+    <div class="blog-card">
+      <div class="blog-thumb"><img src="ruijv_images/973a4d2a376dc72cbd02b6bc69bc9706.jpg" alt="blog"></div>
+      <div class="blog-body">
+        <p class="blog-cat">Materiaaladvies</p>
+        <h3>Linnen, fluweel of bouclé — welk stof past bij jouw bank?</h3>
+        <p>De keuze voor stoffen heeft grote invloed op de sfeer van een ruimte. Een overzicht van de populairste opties.</p>
+        <div class="blog-meta"><span>15 april 2026</span><a href="#" style="color:var(--accent);text-decoration:none;font-size:0.82rem;">Lees meer →</a></div>
+      </div>
+    </div>
+
+    <div class="blog-card">
+      <div class="blog-thumb"><img src="ruijv_images/60f5000d84fbdbc772c370f7d0b71272.jpg" alt="blog"></div>
+      <div class="blog-body">
+        <p class="blog-cat">Inspiratie</p>
+        <h3>Trending in 2026: aardetinten en warme neutrals</h3>
+        <p>De kleurentrend van het moment: terracotta, okergeel, warmgrijs en gebroken wit. Hoe pas je ze toe?</p>
+        <div class="blog-meta"><span>2 april 2026</span><a href="#" style="color:var(--accent);text-decoration:none;font-size:0.82rem;">Lees meer →</a></div>
+      </div>
+    </div>
+
+    <div class="blog-card">
+      <div class="blog-thumb"><img src="ruijv_images/dc949376260bea7391aa3c78df165375.jpg" alt="blog"></div>
+      <div class="blog-body">
+        <p class="blog-cat">Tips</p>
+        <h3>Hoe maak je een moodboard voor je slaapkamer?</h3>
+        <p>Een moodboard helpt je om keuzes te visualiseren voordat je iets koopt. Zo maak je er een die echt werkt.</p>
+        <div class="blog-meta"><span>18 maart 2026</span><a href="#" style="color:var(--accent);text-decoration:none;font-size:0.82rem;">Lees meer →</a></div>
+      </div>
+    </div>
+
+    <div class="blog-card">
+      <div class="blog-thumb"><img src="ruijv_images/b18d19ad48a418130d8bd4c7113e1c7d.jpg" alt="blog"></div>
+      <div class="blog-body">
+        <p class="blog-cat">Kleuradvies</p>
+        <h3>Groen in huis: van salade tot mosgroen — wat werkt?</h3>
+        <p>Groen is terug, maar niet elke groentint werkt in elk huis. Isabel legt uit welke groenen het beste werken.</p>
+        <div class="blog-meta"><span>5 maart 2026</span><a href="#" style="color:var(--accent);text-decoration:none;font-size:0.82rem;">Lees meer →</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NIEUWSBRIEF -->
+<div class="newsletter">
+  <div>
+    <h3>Blijf op de hoogte</h3>
+    <p>Ontvang maandelijks tips en inspiratie in je inbox.</p>
+  </div>
+  <form class="newsletter-form" onsubmit="return false;">
+    <input type="email" placeholder="jouw@email.nl">
+    <button type="submit" class="btn-light">Inschrijven</button>
+  </form>
+</div>
+
+<footer>
+  <img src="ruijv_images/logo_nieuw.png" class="footer-logo" alt="Ruijv Interieur">
+  <ul class="footer-links">
+    <li><a href="#">Privacy</a></li>
+    <li><a href="#">Algemene voorwaarden</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <p class="footer-copy">© 2026 Ruijv Interieur · Isabel · Westland</p>
+</footer>
+
+<a href="https://wa.me/31600000000" class="wa" target="_blank">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  Stuur een bericht
+</a>
+</body>
+</html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Advies Pakketten — Ruijv Interieur</title>
+<link rel="stylesheet" href="_shared_rood.css">
+<style>
+  .pakket-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 40px; }
+  .pakket { background: var(--blush); border-radius: 4px; overflow: hidden; }
+  .pakket.featured { background: var(--dark); color: #fff; }
+  .pakket-img { height: 220px; overflow: hidden; }
+  .pakket-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s; }
+  .pakket:hover .pakket-img img { transform: scale(1.04); }
+  .pakket-body { padding: 28px; }
+  .pakket-tag { font-family: sans-serif; font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--clay); margin-bottom: 8px; }
+  .pakket.featured .pakket-tag { color: var(--clay); }
+  .pakket h3 { font-size: 1.3rem; font-weight: 400; margin-bottom: 10px; color: var(--dark); }
+  .pakket.featured h3 { color: #fff; }
+  .pakket-price { font-size: 1.8rem; font-weight: 700; color: var(--dark); margin-bottom: 16px; font-family: sans-serif; }
+  .pakket.featured .pakket-price { color: var(--clay); }
+  .pakket p { font-family: sans-serif; font-size: 0.88rem; line-height: 1.65; color: var(--text); margin-bottom: 20px; }
+  .pakket.featured p { color: rgba(255,255,255,0.75); }
+  .pakket ul { list-style: none; margin-bottom: 24px; }
+  .pakket ul li { font-family: sans-serif; font-size: 0.86rem; color: var(--text); padding: 6px 0; border-bottom: 1px solid rgba(0,0,0,0.06); display: flex; gap: 8px; align-items: flex-start; }
+  .pakket.featured ul li { color: rgba(255,255,255,0.8); border-color: rgba(255,255,255,0.1); }
+  .pakket ul li::before { content: '✓'; color: var(--clay); font-weight: 700; flex-shrink: 0; }
+  .popular-badge { display: inline-block; background: var(--clay); color: #fff; font-family: sans-serif; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; padding: 3px 10px; border-radius: 20px; margin-bottom: 12px; }
+  .faq { margin-top: 40px; }
+  .faq-item { border-bottom: 1px solid rgba(196,151,122,0.25); padding: 20px 0; cursor: pointer; }
+  .faq-item h4 { font-family: sans-serif; font-size: 0.98rem; color: var(--dark); display: flex; justify-content: space-between; align-items: center; }
+  .faq-item h4::after { content: '+'; color: var(--clay); font-size: 1.3rem; }
+  .faq-item p { font-family: sans-serif; font-size: 0.88rem; line-height: 1.65; color: var(--text); margin-top: 12px; display: none; }
+  .faq-item.open p { display: block; }
+  .faq-item.open h4::after { content: '−'; }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="ruijvinterieur_redesign_rood.html"><img src="ruijv_images/logo_nieuw.png" class="nav-logo" alt="Ruijv Interieur"></a>
+  <ul class="nav-links">
+    <li><a href="portfolio_rood.html">Portfolio</a></li>
+    <li><a href="advies-pakketten_rood.html" class="active">Diensten</a></li>
+    <li><a href="blog_rood.html">Blog</a></li>
+    <li><a href="over-isabel_rood.html">Over Isabel</a></li>
+  </ul>
+  <a href="contact_rood.html" class="nav-cta">Kennismaking aanvragen</a>
+</nav>
+
+<section class="section">
+  <p class="section-tag">Wat bied ik aan</p>
+  <h2>Drie manieren om samen te werken</h2>
+  <p class="section-intro">Of je nu een snelle kleurcheck wilt of begeleiding van begin tot einde — er is een pakket dat bij jou past.</p>
+
+  <div class="pakket-grid">
+    <div class="pakket">
+      <div class="pakket-img"><img src="ruijv_images/143a0bf60b32dc23291c6ef6cda9ca3d.jpg" alt="Kleuradvies"></div>
+      <div class="pakket-body">
+        <p class="pakket-tag">Instap</p>
+        <h3>Kleur- &amp; materiaaladvies</h3>
+        <div class="pakket-price">€ 195</div>
+        <p>Perfect als je wil weten welke kleuren en materialen passen bij jouw ruimte, licht en meubels.</p>
+        <ul>
+          <li>Adviesgesprek van 2 uur bij jou thuis</li>
+          <li>Kleuradvies voor 1 ruimte</li>
+          <li>Materiaal- en stofadvies</li>
+          <li>Digitaal kleurenpalet achteraf</li>
+        </ul>
+        <a href="contact_rood.html" class="btn-outline">Aanvragen</a>
+      </div>
+    </div>
+
+    <div class="pakket featured">
+      <div class="pakket-img"><img src="ruijv_images/9344eaee06e1cdae23ca5a02f7321b78.jpg" alt="Interieuradvies"></div>
+      <div class="pakket-body">
+        <p class="pakket-tag">Populair</p>
+        <span class="popular-badge">Meest gekozen</span>
+        <h3>Interieuradvies aan huis</h3>
+        <div class="pakket-price">€ 295</div>
+        <p>Een volledig adviesgesprek waarbij we samen door de ruimte(s) lopen en je een concreet plan meekrijgt.</p>
+        <ul>
+          <li>Adviesgesprek van 3 uur bij jou thuis</li>
+          <li>Tot 3 ruimtes</li>
+          <li>Kleur, materiaal &amp; inrichting</li>
+          <li>Schriftelijk adviesrapport</li>
+          <li>Leverancierstips op maat</li>
+        </ul>
+        <a href="contact_rood.html" class="btn-light">Aanvragen</a>
+      </div>
+    </div>
+
+    <div class="pakket">
+      <div class="pakket-img"><img src="ruijv_images/84e16d7bf35ae86cadb693b7b6aeb882.jpg" alt="Compleet traject"></div>
+      <div class="pakket-body">
+        <p class="pakket-tag">Compleet</p>
+        <h3>Compleet interieurtraject</h3>
+        <div class="pakket-price">Op maat</div>
+        <p>Volledige begeleiding van concept tot eindresultaat. Voor wie echt wil dat alles klopt.</p>
+        <ul>
+          <li>Meerdere gesprekken &amp; bezoeken</li>
+          <li>Moodboard &amp; sfeerplaat</li>
+          <li>Plattegrond &amp; inrichtingsplan</li>
+          <li>Begeleiding bij inkoop</li>
+          <li>Eindcontrole op locatie</li>
+        </ul>
+        <a href="contact_rood.html" class="btn-outline">Offerte aanvragen</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="warm-section">
+  <p class="section-tag">Veelgestelde vragen</p>
+  <h2>Heb je nog vragen?</h2>
+  <div class="faq">
+    <div class="faq-item" onclick="this.classList.toggle('open')">
+      <h4>Kom je ook buiten het Westland?</h4>
+      <p>Ja, ik werk ook in aangrenzende gemeenten zoals Naaldwijk, Monster, 's-Gravenzande en Den Haag-west. Neem contact op voor de mogelijkheden.</p>
+    </div>
+    <div class="faq-item" onclick="this.classList.toggle('open')">
+      <h4>Hoe lang duurt een adviesgesprek?</h4>
+      <p>Een kleuradvies duurt gemiddeld 2 uur. Een volledig interieuradvies aan huis duurt zo'n 2,5 tot 3 uur. Bij een compleet traject plannen we meerdere momenten in.</p>
+    </div>
+    <div class="faq-item" onclick="this.classList.toggle('open')">
+      <h4>Wat moet ik voorbereiden?</h4>
+      <p>Niets verplicht. Het helpt wel als je een paar foto's of inspiratie verzameld hebt — dat geeft me inzicht in jouw smaak. We bespreken dit ook tijdens de kennismaking.</p>
+    </div>
+    <div class="faq-item" onclick="this.classList.toggle('open')">
+      <h4>Kan ik ook online advies krijgen?</h4>
+      <p>Voor kleuradvies is een locatiebezoek het meest effectief — licht speelt een grote rol. Maar een oriënterend gesprek kan altijd via video.</p>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <h2>Niet zeker welk pakket past?</h2>
+  <p>Plan een gratis en vrijblijvende kennismaking. Dan kijken we samen wat je nodig hebt.</p>
+  <a href="contact_rood.html" class="btn-light">Gratis kennismaking plannen</a>
+</section>
+
+<footer>
+  <img src="ruijv_images/logo_nieuw.png" class="footer-logo" alt="Ruijv Interieur">
+  <ul class="footer-links">
+    <li><a href="#">Privacy</a></li>
+    <li><a href="#">Algemene voorwaarden</a></li>
+    <li><a href="contact_rood.html">Contact</a></li>
+  </ul>
+  <p class="footer-copy">© 2026 Ruijv Interieur · Isabel · Westland</p>
+</footer>
+
+<a href="https://wa.me/31600000000" class="wa" target="_blank">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  Stuur een bericht
+</a>
+</body>
+</html>
